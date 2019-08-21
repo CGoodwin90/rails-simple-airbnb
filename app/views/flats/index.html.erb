@@ -1,0 +1,13 @@
+<div class="container col-6 offset-3 text-center">
+    <h1 class="text-center">All Our Flats</h1>
+  <h2>These are the flats we found</h2>
+<% @flats.each do |flat| %>
+  <div class="card">
+  <div class="flat-card-image" style="background-image: url('https://source.unsplash.com/random')"></div>
+  <h4><%= flat.name %></h4>
+  <p><%= flat.description %></p>
+  <%= link_to 'More Info', flat_path(flat) %>
+  </div>
+  <br>
+<% end %>
+</div>
